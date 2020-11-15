@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search?</title>
+
+    <!-- STYLES -->
+    <!-- Bulma style sheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+        <!-- title/logo section -->
+        <div id="page-title" class="navbar-brand-desktop is-centered">
+            <h1 class="navbar-item mx-4 px-6 navbar-title">Movie Search?</h1>
+        </div>
+
+        <!-- navbar search form -->
+        <div id="form-container" class="navbar-end">
+            <form id="search-form" class="navbar-item navbar-form mx-4 px-6">
+              
+                <!-- search input -->
+                <input id="search-input" class="search-input" name="movie-input" type="text" placeholder="Search for a movie" aut
+                ofocus="true" />
+
+                <!-- submit button -->
+                <button id="search-button" class="search-button" type="submit" >
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- MOVIE INFO SECTION -->
+    <main class="section movie-section" style="min-height: 100vh">
+
+        <!-- SIDE BAR: watch list -->
+        <aside class="watch-list-section">
+            <h3 id="watch-list-title" class="title is-4 mt-5 mb-1 has-text-light">Watch List</h3>
+            <ul id="watch-list" class="watch-list has-text-dark py-3">
+
+            </ul>
+        </aside>
+
+        <!-- css-specific div containers -->
+        <div class="container mx-2 mr-6 my-3">
+            <div class="columns is-centered">
+
+                <!-- COLUMN 1: movie poster section -->
+                <div class="column movie-image-section has-text-centered mt-5 is-4" id = "img-container">
+                    <!-- poster image -->
+                </div>
+
+                <!-- COLUMN 2: movie summary section -->
+                <div id="movie-info-section" class="column has-text-light movie-info-section is-8 mt-5">
+                        <!-- movie title -->
+                  
+                        <h2 id="movie-title" class="is-title is-size-3 my-5">
+                        
+                        </h2>
+                        <div id="button-container" class="buttons">
+                            <!-- watch trailer button/link -->
+                            <a id="watch-trailer-button" class="watch-trailer-button" href="trailer.html" target="_blank">
+                                <i class="fas fa-play play-icon"></i>
+                                <span class="watch-trailer-text">Watch Trailer</span>
+                            </a>
+                            <!-- watch list button -->
+                            <button id="watch-list-button" class="watch-list-button" onclick="displayWatchList();">
+                                <i class="fas fa-plus-circle add-icon"> </i>
+                                <span class="watch-list-text">Add to Watch List</span>
+                            </button>
+                        </div>
+
+                      <!-- movie details (NOTE: if possible, use span tag ids for element selectors) -->
+                      <div id="info-container">
+                        
+                      </div>
+                  
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="./assets/js/script.js"></script>
+    </body>
+</html>
